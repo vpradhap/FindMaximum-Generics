@@ -24,7 +24,7 @@ namespace FindMaximum_Generics.FindMax
             }
             else
             {
-                return default;
+                return first;
             }
         }
         public static double FindMaxDouble(double first, double second, double third)
@@ -43,7 +43,7 @@ namespace FindMaximum_Generics.FindMax
             }
             else
             {
-                return default;
+                return first;
             }
         }
         public static string FindMaxString(string first, string second, string third)
@@ -62,7 +62,7 @@ namespace FindMaximum_Generics.FindMax
             }
             else
             {
-                return "All are equal";
+                return first;
             }
         }
     }
