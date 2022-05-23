@@ -7,6 +7,7 @@ while (flag == 0)
     Console.WriteLine("1 - Find maximum using non-generic method");
     Console.WriteLine("2 - Find maximum using generic method");
     Console.WriteLine("3 - Find maximum using generic class");
+    Console.WriteLine("4 - Find maximum For more than three parameters");
 
     Console.Write("\nYour Pick : ");
     int pick = Convert.ToInt32(Console.ReadLine());
@@ -26,6 +27,17 @@ while (flag == 0)
             Console.WriteLine("\nInteger Maximum Number using generic class : " + GenericClass<int>.Maximum(11, 4, 10));
             Console.WriteLine("Float Maximum Number using generic class : " + GenericClass<double>.Maximum(1.3, 13.6, 21.7));
             Console.WriteLine("string Maximum Number using generic class : " + GenericClass<string>.Maximum("apple", "Apple", "BANANA"));
+            break;
+        case 4:
+            int[] integer = { 5, 12, 36, 2, 10 };
+            MoreParameters<int> moreint = new MoreParameters<int>(integer);
+            Console.WriteLine("\nInteger Maximum Number : " + moreint.MaxMethod());
+            float[] floats = { 55.2f, 12.6f, 36.1f, 2.5f, 10.8f };
+            MoreParameters<float> morefloat = new MoreParameters<float>(floats);
+            Console.WriteLine("Float Maximum Number : " + morefloat.MaxMethod());
+            string[] strings  = {"one","two","three","four","five"};
+            MoreParameters<string> morestring = new MoreParameters<string>(strings);
+            Console.WriteLine("Integer Maximum Number : " + morestring.MaxMethod());
             break;
         default:
             flag = 1;
